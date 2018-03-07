@@ -1,0 +1,16 @@
+extends layout
+block content
+    .log-form
+        h2 Welcome
+        form#form_add_user(name="adduser",method="post",action="/")
+            .wrapper
+                button.google() Log In with google
+            h5 USERNAME
+            input(type="text",name="username")
+            h5 PASSWORD
+            input(type="password",name="password")
+            script(src='/javascripts/test.js')
+            .wrapper
+                button.btn(type='submit' onclick='some()') Log In
+            h5.sign Don't have an account? 
+                a(href='#') Sign Up

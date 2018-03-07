@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h3.
+		Users
+	ul
+		each user, i in resultado
+			li#user_list_item
+			a(href="#") #{user.username} password is  #{user.password} firstname is #{user.personal_information.firstname} last name is  #{user.personal_information.lastname} birthdate is #{user.personal_information.birthday} email is #{user.personal_information.email} gender is #{user.personal_information.gender} background is #{user.webapppreferences.background} fontcolor is font is #{user.webapppreferences.font} sessions open are #{user.session}
+
