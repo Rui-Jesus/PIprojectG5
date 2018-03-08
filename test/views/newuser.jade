@@ -1,14 +1,18 @@
-extends layout
-body
-block content
-	h3= title
-	form#form_add_user(name="adduser",method="post",action="/adduser")
-		span username
-		span &nbsp;
-		input#input_username(type="text",placeholder="username",name="username")
-		br
-		br
-		span password
-		span &nbsp;
-		input#input_password(type="text",placeholder="password",name="password")
-		button#submit_student(type="submit") subtmit
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+	block content
+		h3= title
+		form#form_add_user(name="adduser",method="post",action="/adduser")
+			span username
+			span &nbsp;
+			input#input_username(type="text",placeholder="username",name="username")
+			br
+			br
+			span password
+			span &nbsp;
+			input#input_password(type="text",placeholder="password",name="password")
+			button#submit_student(type="submit") subtmit
