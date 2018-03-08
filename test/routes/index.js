@@ -48,11 +48,11 @@ router.post('/',function(req,res){
             res.redirect("menu");
           }
           else{
-            res.redirect("/");
+            res.render('login',{error:'Username or password incorrect'});
           }
         }
         else{
-          res.redirect("/");
+          res.render('login',{error:'Username or password incorrect'});
         }
         db.close();
       });

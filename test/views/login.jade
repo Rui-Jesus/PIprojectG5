@@ -1,5 +1,10 @@
-extends layout
-block content
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
     .log-form
         h2 Welcome
         form#form_add_user(name="adduser",method="post",action="/")
@@ -10,6 +15,7 @@ block content
             h5 PASSWORD
             input(type="password",name="password")
             script(src='/javascripts/test.js')
+            h5=error
             .wrapper
                 button.btn(type='submit' onclick='some()') Log In
             h5.sign Don't have an account? 
