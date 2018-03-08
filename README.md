@@ -24,4 +24,4 @@ After doing some inserts you may close this console.
 
 To finish, go to the directory to where you clone the project and execute the following command inside "test":
 
->C:\Users\DanielSilva\Desktop\git\PIprojectG5\test
+>C:\Users\DanielSilva\Desktop\git\PIprojectG5\test> npm start
