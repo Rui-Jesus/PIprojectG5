@@ -24,6 +24,10 @@ router.get('/togetherjs',function(req,res){
   res.render('togetherjs',{title:'TogetherJs Component'});
 });
 
+router.get('/test',function(req,res){
+  res.render('test',{title:'TogetherJs Component'});
+});
+
 
 /*Routing  to confirm the login and redirect to either the main menu or to the login again if the password is incorrect*/
 router.post('/',function(req,res){
@@ -71,13 +75,13 @@ router.post('/adduser',function(req,res){
   			console.log("Connection Established");
   		}
   		var collection = db.collection('testdb');
-  		var user1={user: req.body.username,password:req.body.password};
+  		var user1={ username:req.body.username, password:req.body.password, personal_information: { firstname: req.body.firstname, lastname:req.body.lastname, email:req.body.email, gender:req.body.gender}}
   		collection.insert([user1], function (err,result){
   			if(err){
   				console.log(err);
   			}
   			else{
-  				res.redirect("menu");
+  				res.redirect("test");
   			}
   			db.close();
   		})

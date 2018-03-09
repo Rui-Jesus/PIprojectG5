@@ -3,12 +3,15 @@ Collaborative system
 
 To run our programm you will need mongodb and npm.
 
+Since our database is only localhost for now ,follow this commands:
+
 First open a console and execute:
+
 >C:\Users\DanielSilva>mongod
 
 ( don't close this console)
 
-Since our database is only localhost for now ,open annother command line and  execute the following commands:
+Then open another console and execute:
 
 >C:\Users\DanielSilva>mongo
 
@@ -16,9 +19,9 @@ Since our database is only localhost for now ,open annother command line and  ex
 
 >db.createCollection("test")
 
-Then create has many documents as you want following the this structure:
+Create has many documents as you want following  this structure:
 
->db.testdb.insert({ username: "user1", password: p1, personal_information: { firstname: "User", lastname: "Test", birthdate: ISODate("1997-01-01T00:00:00Z"), email: "user@gmail.com", gender: "M" }, webapppreferences: { background: "#000000", fontcolor: "#FFFFFF", font: "Times New Roman" }, sessions: ["test"] })
+>db.testdb.insert({ username: "user2", password: "p2", personal_information: { firstname: "User", lastname: "Test", birthdate:"1/1/1990", email: "user@gmail.com", gender: "M" }})
 
 After doing some inserts you may close this console.
 
